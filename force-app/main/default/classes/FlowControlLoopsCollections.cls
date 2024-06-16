@@ -14,7 +14,7 @@
 * in flow control, loops, and collections. By mastering these concepts, developers will be able to write more
 * efficient and effective code in their Salesforce projects.
 *
-* @author Your Name
+* @author Catherine Popovich
 */
 
 public with sharing class FlowControlLoopsCollections {
@@ -84,7 +84,7 @@ public with sharing class FlowControlLoopsCollections {
 
 
     /**
-     * Question 4 test need to update the name of my change
+     * Question 4
      * Checks if a number is positive, negative, or zero.
      * If the number is null, return null.
      * Example: checkNumber(5) should return "Positive"
@@ -92,26 +92,27 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        String stringDescription;
+        String checkNumberString;
 
-        if (a==null){
-            stringDescription = null;
+        if (a==0) {
+            checkNumberString = 'Zero';
         }
-        
-        if (a>0){
-            stringDescription = 'Positive';
+
+        if (a>0) {
+            checkNumberString = 'Positive';
         }
-        
-        if (a<0){
-            stringDescription = 'Negative';
+
+        if (a<0) {
+            checkNumberString = 'Negative';
         }
-        
-        if (a==0){
-            stringDescription = 'Zero';
-        }
-        
-        return stringDescription; // Replace null with the variable you used to store the result
+
+    
+    return checkNumberString; // Replace null with the variable you used to store the result 
+    
     }
+
+
+
 
     /**
      * Question 5
@@ -122,7 +123,23 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        Integer b = a/2;
+        Integer c = b*2;
+        String indicator = 'test start';
+
+    if (a==null) {
+        indicator = null;
+        return null;
+    }
+
+    if (a==c) {
+        indicator = 'Even';
+        return indicator;
+    }
+
+    indicator = 'Odd';
+    return indicator;
+
     }
 
     /**
@@ -133,7 +150,18 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        String checkStringResult;
+        if (a == '') {
+            checkStringResult =  'Empty';
+        }
+        if (a == null) {
+            checkStringResult =  'Null';
+        }
+        
+        if (a != null && a != '') {
+            checkStringResult = 'Contains Text';
+        }
+        return checkStringResult; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -149,9 +177,27 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        String gradeResult;
 
+        if (score >= 90) {
+            gradeResult = 'A';
+        }
+        if (score >= 80 && score <= 89) {
+            gradeResult = 'B';
+        }
+        if (score >= 70 && score <= 79) {
+            gradeResult = 'C';
+        }
+        if (score >= 60 && score <= 69) {
+            gradeResult = 'D';
+        }
+        if (score <= 59) {
+            gradeResult = 'F';
+        }
+
+        return gradeResult;
+
+    }
 
     /**
      * Question 8
