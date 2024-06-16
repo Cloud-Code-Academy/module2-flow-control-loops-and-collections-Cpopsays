@@ -207,6 +207,8 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
+        
+        
         /* 
          for (){
             
@@ -224,15 +226,13 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String returnHelloWorld() {
         // Initialize the result String
-
+        String myString = 'Hello World!; ';
         // Use a for loop to append 'Hello World!;' to the result string three times
-        /* 
-         for (){
-            
-         }
-        */
+        for(Integer x=0; x<2; x++){
+            myString += 'Hello World!; ';
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        return myString; // Replace null with the variable you used to store the result
     }
 
     /**
