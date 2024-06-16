@@ -200,23 +200,27 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * Question 8
+     * Question 8 - stuck. I was able to write code that worked in debg log for all 
+     * tests other than -5 but that one didn't work. when I ran code
+     * in test class it just said it return a null value so IDK
      * Sum all the integers up to a given limit.
      * Example: sumUpToLimit(5) should return 15
      * @param intLimit The number up to which integers will be summed.
      * @return The sum of all integers up to the limit.
      */
-    public static Integer sumUpToLimit(Integer intLimit) {
-        
-        
-        /* 
-         for (){
-            
-         }
-        */
+    
+     public static Integer sumUpToLimit(Integer intLimit) {
+        /*
+        Integer intSum = 1;
+        for(Integer x = 0; x < intLimit; x++){
+            intSum += x;
 
+        }
+        intSum += x;
+        */
         return null; // Replace null with the variable you used to store the result
     }
+    
 
     /**
      * Question 9
@@ -236,7 +240,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * Question 10
+     * Question 10 - stuck. couldn't get code to do this in debug log. 
      * Generate a string where the input string is repeated the given number of times, with each
 	 * repetition separated by a semicolon. 
      * Do not add a semicolon after the last repetition.
