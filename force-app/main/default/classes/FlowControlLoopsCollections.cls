@@ -240,7 +240,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * Question 10 - stuck. couldn't get code to do this in debug log. 
+     * Question 10 - NOTE: when more confident with conditionals try to place an if statement inside the for loop
      * Generate a string where the input string is repeated the given number of times, with each
 	 * repetition separated by a semicolon. 
      * Do not add a semicolon after the last repetition.
@@ -250,19 +250,19 @@ public with sharing class FlowControlLoopsCollections {
      * @return The new string with the inputString repeated repeatCount times.
      */
     public static String repeatString(String inputString, Integer repeatCount) {
-        // Initialize the result String
+        
+        String newString = '';
+        Integer lastRep = repeatCount-1;
 
         // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-        for () {
-
-            // If it is not the last iteration, add a semicolon to separate the strings
+        // If it is not the last iteration, add a semicolon to separate the strings
+        for (Integer x=0; x < lastRep; x ++){
+            newString += inputString + '; ';
         }
-        */
-
-        // Return the final result string
-        return null; // Replace null with the variable you used to store the result
+        newString += inputString;
+        return newString;        
     }
+
 
     /**
      * Question 11
