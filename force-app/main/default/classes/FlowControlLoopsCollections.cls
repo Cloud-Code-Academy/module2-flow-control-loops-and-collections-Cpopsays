@@ -200,9 +200,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * Question 8 - stuck. I was able to write code that worked in debg log for all 
-     * tests other than -5 but that one didn't work. when I ran code
-     * in test class it just said it return a null value so IDK
+     * Question 8 
      * Sum all the integers up to a given limit.
      * Example: sumUpToLimit(5) should return 15
      * @param intLimit The number up to which integers will be summed.
@@ -210,15 +208,23 @@ public with sharing class FlowControlLoopsCollections {
      */
     
      public static Integer sumUpToLimit(Integer intLimit) {
-        /*
-        Integer intSum = 1;
+        Integer intSum = 0;
+
         for(Integer x = 0; x < intLimit; x++){
             intSum += x;
 
         }
-        intSum += x;
-        */
-        return null; // Replace null with the variable you used to store the result
+        
+        if (intLimit<0){
+            intLimit = 0;
+            return intLimit;
+        }
+
+        else {
+            intSum = intSum + intLimit;
+            return intSum; 
+        }
+        
     }
     
 
