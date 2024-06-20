@@ -352,13 +352,21 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of positive integers from the list.
      */
     public static Integer sumPositiveIntegers() {
+        //variable to store the sum of pos integer s from list
+        Integer intSum = 0;
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
 
         // Loop through the list of integers
+        for (Integer myNumber : numbers){
+            
             // if the number is negative skip this iteration
-        
+            if(myNumber > 0){
+                //add pos number to intSum
+                intSum += myNumber;
+            }
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        return intSum; // Replace null with the variable you used to store the result
     }
 
     /**
