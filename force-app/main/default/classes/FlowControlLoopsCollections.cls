@@ -471,7 +471,8 @@ public with sharing class FlowControlLoopsCollections {
      * Create a map where the keys are the names of employees and the values are their salaries.
      * Then, iterates over the map and checks if an employee's salary is more than 55000.
      * If it is, add the employee's name to a list of employees that is returned by the method.
-     * Remember that a Map is a collection of key-value pairs. Key are a set of unique values, so you can't have duplicate keys. Values are a list of values, so you can have duplicate values.
+     * Remember that a Map is a collection of key-value pairs. Key are a set of unique values, so you can't have duplicate keys. 
+     * Values are a list of values, so you can have duplicate values.
      * Resource: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_for_lists.htm
      * Example: getHighPaidEmployees() should return ['Jane Smith', 'Alice Johnson']
      * @return A list of employee names who have a salary more than 55000.
@@ -482,18 +483,33 @@ public with sharing class FlowControlLoopsCollections {
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        employeeSalaries.put('John Doe', 50000);
         // add Jane Smith => 60000
+        employeeSalaries.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        employeeSalaries.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        employeeSalaries.put('Alice Johnson', 65000);
 
         // Initialize a list to store the names of high paid employees
+        List<String> highEarners = new List<String>();
 
         // Iterate over the Map using a for loop
-            // Check if the salary of the employee is more than 55000
-                // Add the employee to the list of high paid employees
+        //*get the key for each element in the map
+        for(String empName : employeeSalaries.keySet()){
+            //*use the key to retrieve the corresponding value from the map
+            Integer empSalary = employeeSalaries.get(empName);
 
+            //*if the value (salary) is greater than 55000 add the employee to list
+            if(empSalary > 55000){
+                highEarners.add(empName);
+            }
+
+
+
+        }
         // Return the list of high paid employees
-        return null; // Replace null with the variable you used to store the result
+        return highEarners; // Replace null with the variable you used to store the result
     }
 
 }
