@@ -31,7 +31,7 @@ public with sharing class FlowControlLoopsCollections {
     public static String helloWorld(Integer x, Integer y) {
         String helloWorldString = 'Hello World!';
         
-        if (x==null || y==null || x<=y){
+        if (x == null || y == null || x <= y){
             return null;
 
 
